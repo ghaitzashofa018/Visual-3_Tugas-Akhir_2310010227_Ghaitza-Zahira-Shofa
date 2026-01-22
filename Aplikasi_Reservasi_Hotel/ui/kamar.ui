@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KamarWindow</class>
+ <widget class="QMainWindow" name="KamarWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Manajemen Kamar</string>
+  </property>
+
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainLayout">
+
+    <!-- TOP BAR -->
+    <item>
+     <layout class="QHBoxLayout" name="topLayout">
+      <item>
+       <widget class="QPushButton" name="btnKembali">
+        <property name="text">
+         <string>← Kembali ke Dashboard</string>
+        </property>
+        <property name="styleSheet">
+         <string>
+          QPushButton {
+            background-color: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-weight: bold;
+          }
+          QPushButton:hover {
+            background-color: #2980b9;
+          }
+         </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacerTop">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>800</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+
+    <!-- TITLE -->
+    <item>
+     <widget class="QLabel" name="titleLabel">
+      <property name="text">
+       <string>Daftar Kamar</string>
+      </property>
+      <property name="styleSheet">
+       <string>
+        QLabel {
+          font-size: 22px;
+          font-weight: bold;
+          color: #2c3e50;
+          margin: 10px 0;
+        }
+       </string>
+      </property>
+     </widget>
+    </item>
+
+    <!-- STATISTIK -->
+    <item>
+     <layout class="QHBoxLayout" name="statsLayout">
+
+      <item>
+       <widget class="QGroupBox" name="stat1">
+        <property name="title">
+         <string>Tersedia</string>
+        </property>
+        <layout class="QVBoxLayout">
+         <item>
+          <widget class="QLabel" name="stat1Value">
+           <property name="text">
+            <string>12</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="styleSheet">
+            <string>font-size: 26px; color: #2ecc71; font-weight: bold;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+
+      <item>
+       <widget class="QGroupBox" name="stat2">
+        <property name="title">
+         <string>Terisi</string>
+        </property>
+        <layout class="QVBoxLayout">
+         <item>
+          <widget class="QLabel" name="stat2Value">
+           <property name="text">
+            <string>8</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="styleSheet">
+            <string>font-size: 26px; color: #e74c3c; font-weight: bold;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+
+      <item>
+       <widget class="QGroupBox" name="stat3">
+        <property name="title">
+         <string>Perawatan</string>
+        </property>
+        <layout class="QVBoxLayout">
+         <item>
+          <widget class="QLabel" name="stat3Value">
+           <property name="text">
+            <string>3</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="styleSheet">
+            <string>font-size: 26px; color: #f39c12; font-weight: bold;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+
+      <item>
+       <widget class="QGroupBox" name="stat4">
+        <property name="title">
+         <string>Total Kamar</string>
+        </property>
+        <layout class="QVBoxLayout">
+         <item>
+          <widget class="QLabel" name="stat4Value">
+           <property name="text">
+            <string>23</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="styleSheet">
+            <string>font-size: 26px; color: #3498db; font-weight: bold;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+
+     </layout>
+    </item>
+
+    <!-- BUTTON ACTION -->
+    <item>
+     <layout class="QHBoxLayout">
+      <item>
+       <widget class="QPushButton" name="filterBtn">
+        <property name="text">
+         <string>Filter</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacerBtn">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>600</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="tambahBtn">
+        <property name="text">
+         <string>Tambah Kamar</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <!-- TABLE -->
+    <item>
+     <widget class="QTableWidget" name="kamarTable"/>
+    </item>
+
+    <item>
+     <widget class="QLabel" name="totalLabel">
+      <property name="text">
+       <string>Total Kamar: 23</string>
+      </property>
+     </widget>
+    </item>
+
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
